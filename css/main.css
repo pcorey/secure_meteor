@@ -1,0 +1,30 @@
+html, body {
+    font-size: 20px !important;
+}
+
+a {
+    color: #ff008d !important;
+}
+
+hr {
+    border: 0;
+    border-bottom: 4px solid #eee;
+    margin: 3em auto;
+    width: 75%;
+}
+
+body > header .ui.secondary.pointing.menu {
+    border: 0;
+}
+
+body > header {
+    margin: 2em 0;
+}
+
+body > header a {
+    font-weight: bold !important;
+}
+
+body > header .logo {
+    padding-left: 0 !important;
+}
