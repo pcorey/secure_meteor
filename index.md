@@ -2,6 +2,11 @@
 layout: page
 ---
 
+<div class="hero">
+  <h1>Secure Meteor</h1>
+  <p>Learn to build secure <a href="https://www.meteor.com/">Meteor</a> applications by looking at potential vulnerabilities and how to prevent them.</p>
+</div>
+
 I’m a software developer, but I spend a lot of time thinking and worrying about software security. In fact, I’ve even recently started working on a software security service called [Inject Detect](http://www.injectdetect.com/)!
 
 Sometimes my friends and coworkers ask why I, as a software developer, spend so much time writing about security. Why don’t I give up on development and focus on security full-time?
