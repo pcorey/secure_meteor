@@ -1,9 +1,20 @@
-html, body {
+html {
     font-size: 20px !important;
 }
 
+body > section {
+    margin-bottom: 8em;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 16px !important;
+    }
+}
+
 a {
-    color: #ff008d !important;
+    /* color: #ff008d !important; */
+    color: #ff0055 !important;
     /* text-decoration: underline dashed #ff008d !important; */
 }
 
@@ -14,6 +25,10 @@ hr {
     width: 75%;
 }
 
+.ui.text.container {
+    max-width: 800px !important;
+}
+
 body > header .ui.secondary.pointing.menu {
     border: 0;
 }
@@ -22,7 +37,7 @@ body > header .ui.secondary.pointing.menu .item:last-of-type {
     /* padding-right: 0 !important; */
 }
 
-body > header {
+header {
     margin: 2em 0;
 }
 
@@ -51,4 +66,28 @@ body > header .logo {
 
 .hero p {
     text-align: center;
+}
+
+.feather {
+    height: 1em;
+    vertical-align: middle;
+    margin-bottom: 6px;
+    margin-right: 6px;
+}
+
+ul {
+    list-style: square;
+}
+
+code {
+    font-family: 'Source Code Pro', monospace !important;
+}
+
+.checklist p {
+    margin: 0 0;
+}
+
+.checklist .todo-item {
+    font-weight: bold;
+    margin-top: 1em;
 }
