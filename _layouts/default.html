@@ -14,6 +14,8 @@
         <meta name="google-site-verification" content="ut-g0UTIu8DWrEtUvWSXrVlCq1exF4YD54ANC-c9rsk" />
         <link rel="icon" type="image/png" href="{{ "/img/favicon.png" | prepend: site.baseurl }}">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+        <link rel="stylesheet" href="/css/pygments.css">
+        <link rel="stylesheet" href="https://use.typekit.net/ssa1tke.css">
         <link rel="stylesheet" href="/css/main.css">
         <script
             src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -27,14 +29,19 @@
             <div class="ui large secondary pointing menu">
                 <a href="/" class="item logo">Secure Meteor</a>
                 <div class="right menu">
-                    <a href="/book" class="ui item">The Book</a>
-                    <a href="/blog" class="ui item">Blog</a>
+                    <a href="#sign-up" class="ui item">The Book</a>
+                    <a href="#sign-up" class="ui item">Blog</a>
                     </div>
                 </div>
         </header>
         <section class="{{page.class}}">
             {{ content }}
         </section>
+        <footer>
+            <div class="ui text container">
+                <p>&copy; Pete Corey & East5th Inc. 2018</p>
+            </div>
+        </footer>
         <script>
             feather.replace();
         </script>

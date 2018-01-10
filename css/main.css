@@ -1,5 +1,23 @@
 html {
-    font-size: 20px !important;
+    height: auto;
+    font-size: 24px !important;
+}
+
+body {
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    font-size: 1em;
+    color: #ddd;
+    margin-bottom: 1em;
+}
+
+* {
+    font-family: "freight-sans-pro",sans-serif !important;
+    /* font-family: "proxima-nova",sans-serif !important; */
+    /* font-family: "lato",sans-serif !important; */
 }
 
 body > section {
@@ -15,6 +33,7 @@ body > section {
 a {
     /* color: #ff008d !important; */
     color: #ff0055 !important;
+    /* color: #478ce5 !important; */
     /* text-decoration: underline dashed #ff008d !important; */
 }
 
@@ -90,4 +109,29 @@ code {
 .checklist .todo-item {
     font-weight: bold;
     margin-top: 1em;
+}
+
+.landing .invert {
+    margin: 0 0 4em 0;
+    padding: 4em 0;
+    /* border-top: 4px solid #f8f8f8; */
+    /* border-bottom: 4px solid #f8f8f8; */
+    background-color: #f8f8f8;
+    /* background-color: rgba(0,0,0,.87); */
+    /* color: white; */
+}
+
+.landing .form {
+    margin: 2em 0;
+}
+
+.landing .form .button {
+    width: 100%;
+}
+
+.landing .form .button,
+.landing .form .button:hover,
+.landing .form .button:focus,
+.landing .form .button:active {
+    background-color: #ff0055;
 }

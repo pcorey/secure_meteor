@@ -1,30 +1,42 @@
 ---
 layout: page
+class: landing
 ---
 
+<div class="ui text container tk-freight-sans-pro">
 <div class="hero">
   <h1>Secure Meteor</h1>
-  <p>Learn to build secure Meteor applications by looking at potential vulnerabilities and how to prevent them.</p>
+  <p>Learn the ins and outs of securing your Meteor application from a Meteor security professional.</p>
 </div>
 
-Meteor is a truly amazing web development framework that has opened the doors to software development efficiency and productivity unlike any framework that has come before it.
+</div>
+<div class="invert">
+  <div class="ui text container">
+    <p>I'm <a href="http://www.petecorey.com/">Pete Corey</a>, and for the last three years I’ve been <a href="http://www.petecorey.com/blog/tags/#security">writing</a> and <a href="http://www.petecorey.com/blog/2016/03/21/nosql-injection-in-modern-web-applications/">speaking</a> about Meteor security, <a href="http://www.petecorey.com/our-work/">developing and deploying</a> secure Meteor applications, working with amazing teams to <a href="http://www.petecorey.com/blog/2016/05/30/anatomy-of-an-assessment/">better secure their applications</a>, and building <a href="https://github.com/East5th/check-checker">security</a>-<a href="https://github.com/East5th/package-scan">focused</a> packages and <a href="http://www.injectdetect.com/">tools</a> for the Meteor ecosystem.</p>
+    <p>Secure Meteor is a an effort to capture and distill everything I’ve learned about Meteor security from my years of real-world Meteor security experience.</p>
+    <!-- <p>Knowledge is power, and I want to give you the knowledge the empower you to keep your Meteor application secure.</p> -->
+    <!-- <p>I firmly believe that knowledge is power. I want to give you the knowledge required to empower you to keep your Meteor application safe and secure.</p> -->
+    <!-- <p>Secure Meteor will teach you everything I’ve come to know about Meteor security.</p> -->
+  </div>
+</div>
 
-That said, new ideas and techniques used by the framework can lead to confusion about how to build secure applications. Even the confidence given to us by Meteor can lead to a more casual attitude about your application’s security.
+<div class="ui text container" id="sign-up">
 
-Why should you worry about the security of your application, anyways?
+<p>Secure Meteor is still very much in its early stages of development. As a teaser and a token of thanks for showing interest, <strong>I want to give you the most detailed Meteor security checklist available anywhere, <em>for free!</em></strong></p>
 
-Security is fundamental to everything we do as software creators. It is an underlying assumption that makes everything we do possible. We spend countless hours building an effective team, developing amazing software and nurturing trust with our users, but all of that falls to the floor without security.
+<p>In addition to the Meteor security checklist, I’ll also send you periodic updates on Secure Meteor, content sneak peaks, and original articles related to securing your Meteor application.</p>
 
----- 
+<form class="ui form validate" action="https://east5th.us11.list-manage.com/subscribe/post?u=f8833fd40e2b1b28545d9f382&amp;id=f84ae000ef" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+    <div class="field">
+        <label>First Name</label>
+        <input type="text" value="" placeholder="First name" name="FNAME" class="" id="mce-FNAME">
+    </div>
+    <div class="field">
+        <label>Email</label>
+        <input type="email" value="" placeholder="Email" name="EMAIL" class="required email" id="mce-EMAIL">
+    </div>
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f8833fd40e2b1b28545d9f382_f84ae000ef" tabindex="-1" value=""></div>
+    <input type="submit" value="Get my free Meteor security checklist!" name="subscribe" id="mc-embedded-subscribe" class="ui primary button">
+</form>
 
-Imagine your company is doing well. Your application is a pleasure to use, and your user base is rapidly growing. You’ve attracted investors and you’ve built yourself an amazing team.
-
-But suddenly, everything changes. A malicious user has managed to find and exploit a severe vulnerability within your application. Their attack has negatively impacted hundreds users.
-
-The hard earned trust between those affected users and your company vanishes instantly. Other users, when they learn of the attack, quickly begin to lose trust as well. Now, one of the first results when people google your product is a scathing TechCrunch article outlining the gory details of the attack. Soon, investors lose interest. With their lack of support and a rapidly dwindling user base, you realize that you won’t be able to make payroll this month.
-
----- 
-
-The question of “why security?” is answered simply: __Because everything we do depends on it.__
-
-Security isn’t something that can be tacked on at the end of the software development process. Building vulnerability-free software is a holistic process, and security should be considered along every step of the way.
+</div>

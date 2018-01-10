@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: wrapped
 title: Meteor Security Checklist
 class: checklist
 ---
@@ -16,7 +16,7 @@ Your application code may be secure, but if you’re using a vulnerable Meteor p
 
 Node.js dependencies lay the foundation for your Meteor application. Make sure that your foundation is sound.
 
-<i data-feather="link"></i> [http://www.east5th.co/blog/2016/06/20/node-vulnerability-scanners-in-a-13-world/](http://www.east5th.co/blog/2016/06/20/node-vulnerability-scanners-in-a-13-world/)
+<i data-feather="link"></i> [http://www.petecorey.com/blog/2016/06/20/node-vulnerability-scanners-in-a-13-world/](http://www.petecorey.com/blog/2016/06/20/node-vulnerability-scanners-in-a-13-world/)
 
 ## Methods, Publications, and Server-side Routes
 
@@ -24,7 +24,7 @@ Node.js dependencies lay the foundation for your Meteor application. Make sure t
 
 Using `check` to make assertions about the type and shape of user inputs can prevent entire families of NoSQL injection vulnerabilities.
 
-<i data-feather="link"></i> [http://www.east5th.co/blog/2016/03/21/nosql-injection-in-modern-web-applications/](http://www.east5th.co/blog/2016/03/21/nosql-injection-in-modern-web-applications/)
+<i data-feather="link"></i> [http://www.petecorey.com/blog/2016/03/21/nosql-injection-in-modern-web-applications/](http://www.petecorey.com/blog/2016/03/21/nosql-injection-in-modern-web-applications/)
 
 <i data-feather="link"></i> [https://github.com/East5th/check-checker](https://github.com/East5th/check-checker)
 
@@ -34,23 +34,25 @@ Never use a user-provided field when a trusted alternative is available.
 
 <i data-feather="link"></i> [https://guide.meteor.com/security.html#user-id-client](https://guide.meteor.com/security.html#user-id-client)
 
+<i data-feather="link"></i> [http://www.petecorey.com/blog/2015/05/05/meteor-security-in-the-wild/](http://www.petecorey.com/blog/2015/05/05/meteor-security-in-the-wild/)
+
 <p class="todo-item"><i data-feather="check-square"></i> Verify that methods, publications, and server-side routes are making authentication and authorization checks.</p>
 
 Always verify that the current user has permission to do the thing they’re trying to do. Similarly, never assume that an unauthorized user can’t call a method or publication because it wasn’t publicly defined.
 
-<i data-feather="link"></i> [http://www.east5th.co/blog/2016/02/01/sending-emails-through-hidden-methods/](http://www.east5th.co/blog/2016/02/01/sending-emails-through-hidden-methods/)
+<i data-feather="link"></i> [http://www.petecorey.com/blog/2016/02/01/sending-emails-through-hidden-methods/](http://www.petecorey.com/blog/2016/02/01/sending-emails-through-hidden-methods/)
 
 <p class="todo-item"><i data-feather="check-square"></i> Always be aware of where your code is running.</p>
 
 In a Javascript-everywhere ecosystem, we can sometimes forget whether a specific piece of code runs of the client or the server.
 
-<i data-feather="link"></i> [http://www.east5th.co/blog/2015/09/21/never-forget-where-your-code-runs/](http://www.east5th.co/blog/2015/09/21/never-forget-where-your-code-runs/)
+<i data-feather="link"></i> [http://www.petecorey.com/blog/2015/09/21/never-forget-where-your-code-runs/](http://www.petecorey.com/blog/2015/09/21/never-forget-where-your-code-runs/)
 
 <p class="todo-item"><i data-feather="check-square"></i> Test that MongoDB queries are behaving as expected in all circumstances.</p>
 
 Incorrectly written queries can lead to over-publishing and the leaking of data to the client.
 
-<i data-feather="link"></i> [http://www.east5th.co/blog/2016/09/05/querying-non-existent-mongodb-fields/](http://www.east5th.co/blog/2016/09/05/querying-non-existent-mongodb-fields/)
+<i data-feather="link"></i> [http://www.petecorey.com/blog/2016/09/05/querying-non-existent-mongodb-fields/](http://www.petecorey.com/blog/2016/09/05/querying-non-existent-mongodb-fields/)
 
 <p class="todo-item"><i data-feather="check-square"></i> Rate limit and unblock your methods and publications where appropriate.</p>
 
@@ -64,9 +66,9 @@ Allow and deny rules can be hard to reason about and even harder to implement co
 
 <i data-feather="link"></i> [https://guide.meteor.com/security.html#allow-deny](https://guide.meteor.com/security.html#allow-deny)
 
-<i data-feather="link"></i> [http://www.east5th.co/blog/2015/06/15/allow-and-deny-challenge-check-yourself/](http://www.east5th.co/blog/2015/06/15/allow-and-deny-challenge-check-yourself/)
+<i data-feather="link"></i> [http://www.petecorey.com/blog/2015/06/15/allow-and-deny-challenge-check-yourself/](http://www.petecorey.com/blog/2015/06/15/allow-and-deny-challenge-check-yourself/)
 
-<p class="todo-item"><i data-feather="check-square"></i> Always whitelist the fields of documents returned by methods and especially subscriptions.</p>
+<p class="todo-item"><i data-feather="check-square"></i> Always whitelist the fields of documents returned by methods and subscriptions.</p>
 
 Whitelisting the fields returned by a query can prevent sensitive data being accidentally leaked to the client.
 
@@ -74,7 +76,7 @@ Whitelisting the fields returned by a query can prevent sensitive data being acc
 
 <p class="todo-item"><i data-feather="check-square"></i> Use reactive data sources to securely invalidate cursors returned by publications.</p>
 
-Use reactive data sources like `this.userId`, or `peerlibrary:reactive-publish` to continually ensure that a user is authorized to see the data being published.
+Use reactive data sources like `this.userId`, or the `reactive-publish` package to continually ensure that a user is authorized to see the data being published.
 
 <i data-feather="link"></i> [https://guide.meteor.com/security.html#publications-user-id](https://guide.meteor.com/security.html#publications-user-id)
 
@@ -84,17 +86,17 @@ Use reactive data sources like `this.userId`, or `peerlibrary:reactive-publish` 
 
 <p class="todo-item"><i data-feather="check-square"></i> Limit and audit the use of raw HTML injection.</p>
 
-Triple braces in Blaze and `dangerouslySetInnerHTML` in React should be used sparingly. User-provided data being injected directly into the DOM should be thoroughly sanitized.
+Triple braces in Blaze, `dangerouslySetInnerHTML` in React, and jQuery's `html` should be used sparingly. User-provided data being injected directly into the DOM must be thoroughly sanitized.
 
-<i data-feather="link"></i> [http://www.east5th.co/blog/2015/04/03/black-box-meteor-triple-brace-xss/](http://www.east5th.co/blog/2015/04/03/black-box-meteor-triple-brace-xss/)
+<i data-feather="link"></i> [http://www.petecorey.com/blog/2015/04/03/black-box-meteor-triple-brace-xss/](http://www.petecorey.com/blog/2015/04/03/black-box-meteor-triple-brace-xss/)
 
-<i data-feather="link"></i> [http://www.east5th.co/blog/2015/09/07/hijacking-meteor-accounts-with-xss/](http://www.east5th.co/blog/2015/09/07/hijacking-meteor-accounts-with-xss/)
+<i data-feather="link"></i> [http://www.petecorey.com/blog/2015/09/07/hijacking-meteor-accounts-with-xss/](http://www.petecorey.com/blog/2015/09/07/hijacking-meteor-accounts-with-xss/)
 
 <p class="todo-item"><i data-feather="check-square"></i> Check for other instances of cross-site scripting vulnerabilities.</p>
 
 Third party packages and plugins can sometimes be vulnerable to cross-site scripting attacks. Make sure you’re sanitizing user-provided data before handing it off to any front-end library.
 
-<i data-feather="link"></i> [http://www.east5th.co/blog/2016/03/14/stored-xss-and-unexpected-unsafe-eval/](http://www.east5th.co/blog/2016/03/14/stored-xss-and-unexpected-unsafe-eval/)
+<i data-feather="link"></i> [http://www.petecorey.com/blog/2016/03/14/stored-xss-and-unexpected-unsafe-eval/](http://www.petecorey.com/blog/2016/03/14/stored-xss-and-unexpected-unsafe-eval/)
 
 <p class="todo-item"><i data-feather="check-square"></i> Tighten up your content security policy.</p>
 
@@ -114,7 +116,7 @@ Use `force-ssl` or configure your load balancer/reverse proxy to always redirect
 
 Upfront work can mitigate the pain of Denial of Service attacks in the future.
 
-<i data-feather="link"></i> [http://www.east5th.co/blog/2016/05/16/the-missing-link-in-meteors-rate-limiter/](http://www.east5th.co/blog/2016/05/16/the-missing-link-in-meteors-rate-limiter/)
+<i data-feather="link"></i> [http://www.petecorey.com/blog/2016/05/16/the-missing-link-in-meteors-rate-limiter/](http://www.petecorey.com/blog/2016/05/16/the-missing-link-in-meteors-rate-limiter/)
 
 <p class="todo-item"><i data-feather="check-square"></i> Ensure no sensitive business secrets are being bundled with the client Javascript application.</p>
 
@@ -122,9 +124,9 @@ Malicious users can inspect the source code and extract your sensitive business 
 
 <i data-feather="link"></i> [https://guide.meteor.com/security.html#secret-code](https://guide.meteor.com/security.html#secret-code)
 
-<i data-feather="link"></i> [http://www.east5th.co/blog/2015/04/15/black-box-meteor-method-auditing/](http://www.east5th.co/blog/2015/04/15/black-box-meteor-method-auditing/)
+<i data-feather="link"></i> [http://www.petecorey.com/blog/2015/04/15/black-box-meteor-method-auditing/](http://www.petecorey.com/blog/2015/04/15/black-box-meteor-method-auditing/)
 
-<i data-feather="link"></i> [http://www.east5th.co/blog/2016/02/15/method-auditing-revisited/](http://www.east5th.co/blog/2016/02/15/method-auditing-revisited/)
+<i data-feather="link"></i> [http://www.petecorey.com/blog/2016/02/15/method-auditing-revisited/](http://www.petecorey.com/blog/2016/02/15/method-auditing-revisited/)
 
 <p class="todo-item"><i data-feather="check-square"></i> Never keep API tokens or other secrets directly in your source code.</p>
 
@@ -132,7 +134,7 @@ Secrets kept in code can mistakenly find their way to the client where they can 
 
 <i data-feather="link"></i> [https://guide.meteor.com/security.html#api-keys](https://guide.meteor.com/security.html#api-keys)
 
-<i data-feather="link"></i> [http://www.east5th.co/blog/2015/04/15/black-box-meteor-method-auditing/](http://www.east5th.co/blog/2015/04/15/black-box-meteor-method-auditing/)
+<i data-feather="link"></i> [http://www.petecorey.com/blog/2015/04/15/black-box-meteor-method-auditing/](http://www.petecorey.com/blog/2015/04/15/black-box-meteor-method-auditing/)
 
 <p class="todo-item"><i data-feather="check-square"></i> Don’t expose secrets through the <code class="highlighter-rogue">public</code> field of <code class="highlighter-rogue">Meteor.settings</code>.</p>
 
