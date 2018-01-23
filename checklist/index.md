@@ -22,11 +22,12 @@ Node.js dependencies lay the foundation for your Meteor application. Make sure t
 
 <p class="todo-item"><i data-feather="check-square"></i> Thoroughly check <em>all</em> method, publication, and route arguments.</p>
 
-Using `check` to make assertions about the type and shape of user inputs can prevent entire families of NoSQL injection vulnerabilities.
+Using `check` to make assertions about the type and shape of user inputs can prevent entire families of NoSQL injection vulnerabilities. Never pass unchecked data into a query.
 
 <i data-feather="link"></i> [http://www.petecorey.com/blog/2016/03/21/nosql-injection-in-modern-web-applications/](http://www.petecorey.com/blog/2016/03/21/nosql-injection-in-modern-web-applications/)
 
 <i data-feather="link"></i> [https://github.com/East5th/check-checker](https://github.com/East5th/check-checker)
+
 
 <p class="todo-item"><i data-feather="check-square"></i> Use trusted fields (like <code class="highlighter-rogue">this.userId</code>) whenever possible.</p>
 
